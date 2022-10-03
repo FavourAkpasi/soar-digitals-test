@@ -34,7 +34,6 @@ const Top = styled.div`
   display: flex;
   justify-content: space-between;
 `;
-
 const Item = styled.div`
   flex-basis: 32.5%;
   padding: 1.7rem 1.5rem;
@@ -65,7 +64,6 @@ const TableContainer = styled.div`
   border-radius: 5px;
   margin-top: 2rem;
 `;
-
 const Table = styled.table`
   border-collapse: collapse;
   background-color: #fff;

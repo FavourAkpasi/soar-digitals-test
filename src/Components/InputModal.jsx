@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import ActionButton from "./Button";
+import { Button, ActionButton } from "./Button";
 import { FiX } from "react-icons/fi";
 import Dropdown from "./Dropdown";
 import dayjs from "dayjs";
+import AdvancedFormat from "dayjs/plugin/advancedFormat";
+dayjs.extend(AdvancedFormat);
 
 import {
   Location,
@@ -150,9 +152,15 @@ const InputModal = ({ handleModal, maintenance, setMaintenance }) => {
   };
 
   const handleSubmit = () => {
-    if ((location, equipmentType, date, status, equipment !== "")) {
+    if (
+      date &&
+      location &&
+      equipmentType &&
+      sbu &&
+      equipment &&
+      status !== ""
+    ) {
       const formattedDate = dayjs(date).format("MMM Do YYYY");
-
       const newMaintenanceData = {
         location: location,
         equipmentId: equipmentType,
@@ -280,6 +288,7 @@ const InputModal = ({ handleModal, maintenance, setMaintenance }) => {
           </>
         )}
       </MiddleContainer>
+
       <BottomContainer>
         <ActionButton
           variant="outline"
