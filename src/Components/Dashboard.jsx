@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { FaSearch } from "react-icons/fa";
 import { FiPlus } from "react-icons/fi";
 import styled from "styled-components";
 import { TableData } from "../../Data";
@@ -14,7 +13,6 @@ const Container = styled.div`
   padding: 2rem 1rem 1rem;
   position: relative;
 `;
-
 const TitleBar = styled.div`
   width: 100%;
   position: relative;
@@ -69,6 +67,19 @@ const Table = styled.table`
   background-color: #fff;
   table-layout: auto;
   width: 100%;
+`;
+const Th = styled.th`
+  white-space: nowrap;
+  text-align: left;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 600;
+  background-color: #f8fbfc;
+  font-size: 0.8rem;
+  padding: 16px 12px;
+  border-bottom: 1px solid rgba(22, 22, 22, 0.12);
+  color: rgba(14, 14, 14, 0.55);
 `;
 
 const Dashboard = () => {
@@ -125,12 +136,12 @@ const Dashboard = () => {
             <Table>
               <thead>
                 <tr>
-                  <th>Date</th>
-                  <th>Equipment ID</th>
-                  <th>Location</th>
-                  <th>SBU</th>
-                  <th>Equipment</th>
-                  <th>Status</th>
+                  <Th>Date</Th>
+                  <Th>Equipment ID</Th>
+                  <Th>Location</Th>
+                  <Th>SBU</Th>
+                  <Th>Equipment</Th>
+                  <Th>Status</Th>
                 </tr>
               </thead>
               <tbody>

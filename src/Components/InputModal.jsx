@@ -140,11 +140,11 @@ const InputModal = ({ handleModal, maintenance, setMaintenance }) => {
   const [equipmentType, setEquipmentType] = useState("");
   const [status, setStatus] = useState("");
   const [sbu, setSbu] = useState("");
-
   const [date, setDate] = useState("");
-
   const [active, setActive] = useState(1);
   const [loading, setLoading] = useState(false);
+
+  //toggle form, handle submit
 
   const handleActiveState = (e, id) => {
     e.stopPropagation();

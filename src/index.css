@@ -10,30 +10,6 @@ body {
   transition: 0.3s ease all;
 }
 
-td,
-th {
-  white-space: nowrap;
-  text-align: left;
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-th {
-  font-weight: 600;
-  background-color: #f8fbfc;
-  font-size: 0.8rem;
-  padding: 16px 12px;
-  border-bottom: 1px solid rgba(22, 22, 22, 0.12);
-  color: rgba(14, 14, 14, 0.55);
-}
-
-td {
-  padding: 22px 12px;
-  border-bottom: 1px solid rgba(121, 121, 121, 0.12);
-  font-size: 0.9rem;
-}
-
 tr:last-child td {
   border: none;
 }
